@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forward Sacco Job Portal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('462887722_122114788520522953_4553497789771266252_n.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: #28a745; /* Green */
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header img {
+            width: 150px;
+            margin-bottom: 0.5rem;
+        }
+        header h1 {
+            color: #ffc107; /* Yellow */
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .container {
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 8px;
+        }
+        .job-list {
+            list-style: none;
+            padding: 0;
+        }
+        .job-list li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ffc107; /* Yellow border */
+            border-radius: 4px;
+            background: rgba(40, 167, 69, 0.8); /* Green background */
+        }
+        .job-list li button {
+            background-color: #ffc107; /* Yellow button */
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .job-list li button:hover {
+            background-color: #ffdd57; /* Slightly lighter yellow */
+        }
+        .number-display {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background: rgba(255, 193, 7, 0.9); /* Yellow highlight */
+            border: 1px solid #fff;
+            border-radius: 4px;
+            color: #000;
+            font-weight: bold;
+        }
+        .whatsapp-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .whatsapp-section a {
+            background-color: #25d366; /* WhatsApp green */
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+        }
+        .whatsapp-section a:hover {
+            background-color: #1da851; /* Slightly darker WhatsApp green */
+        }
+        .whatsapp-section img {
+            width: 20px;
+            height: 20px;
+        }
+        footer {
+            text-align: center;
+            background-color: #28a745; /* Green */
+            color: #ffc107; /* Yellow */
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LOGO_1.fw.png" alt="Forward Sacco Logo">
+        <h1>Forward Sacco</h1>
+        <p>Services You Can Trust</p>
+    </header>
+
+    <div class="container" id="jobs">
+        <h2>Available Jobs</h2>
+        <ul class="job-list">
+            <li>
+                <strong>Job Title:</strong> Driver for City Route<br>
+                <strong>Details:</strong> Full-time, $20/hour<br>
+                <button onclick="showEmployerPhone('555-123-4567')">Apply</button>
+            </li>
+            <li>
+                <strong>Job Title:</strong> Conductor for Suburban Route<br>
+                <strong>Details:</strong> Part-time, $15/hour<br>
+                <button onclick="showEmployerPhone('555-987-6543')">Apply</button>
+            </li>
+        </ul>
+        <div id="phone-number" class="number-display hidden"></div>
+    </div>
+
+    <div class="whatsapp-section">
+        <h2>Don't see a suitable job?</h2>
+        <p>Send your CV via WhatsApp to inquire about opportunities.</p>
+        <a href="https://wa.me/254718254092?text=Hello%20Forward%20Sacco,%20I%20would%20like%20to%20send%20my%20CV%20for%20job%20consideration." target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            Message Us on WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2024 Forward Sacco - All Rights Reserved.
+    </footer>
+
+    <script>
+        // Function to display the employer's phone number
+        function showEmployerPhone(phoneNumber) {
+            const displayDiv = document.getElementById("phone-number");
+            displayDiv.textContent = `Employer's Phone Number: ${phoneNumber}`;
+            displayDiv.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
